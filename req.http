@@ -1,0 +1,151 @@
+//get all customers
+get http://localhost:8000/customer-api/get-customers
+
+
+
+###  //create customer-1
+post http://localhost:8000/customer-api/create-customer
+Content-Type: application/json
+
+{
+  "customer_name":"sam",
+  "customer_email":"sam@gmail.com",
+  "address":{
+    "street":"main street",
+    "city":"hyd",
+    "state":"Telangana",
+    "pincode":546463
+  }
+}
+
+###  //create customer-2
+post http://localhost:8000/customer-api/create-customer
+Content-Type: application/json
+
+{
+  "customer_name":"sammy",
+  "customer_email":"sammy@gmail.com",
+  "address":{
+    "street":"main street",
+    "city":"gnt",
+    "state":"AP",
+    "pincode":522006
+  }
+
+}
+
+
+###  create product-1
+post http://localhost:8000/product-api/create-product
+Content-Type: application/json
+
+{
+  "product_name":"mobile",
+  "product_price":10000
+}
+
+###  create product-2
+post http://localhost:8000/product-api/create-product
+Content-Type: application/json
+
+{
+  "product_name":"laptop",
+  "product_price":200000
+}
+
+###  write review-1
+post http://localhost:8000/customer-api/write-review
+Content-Type: application/json
+
+{
+  "customer_id":1,
+  "product_id":1,
+  "review_date":"2022-10-10",
+  "review_desc":"first review"
+} 
+
+
+
+###  write review-2
+post http://localhost:8000/customer-api/write-review
+Content-Type: application/json
+
+{
+  "customer_id":2,
+  "product_id":2,
+  "review_date":"2022-10-10",
+  "review_desc":"second review"
+} 
+
+###  //get all reviews by all customers
+get http://localhost:8000/customer-api/customers-reviews
+
+###  //get reviews by specific customer
+get http://localhost:8000/customer-api/reviews-by-customer/1
+
+
+### create order-1
+post http://localhost:8000/customer-api/create-order
+Content-Type: application/json
+
+{
+  "order_id":1,
+  "order_date":"2020-02-02",
+  "customer_id":1,
+  "product_id":1
+}
+
+### create order-2
+post http://localhost:8000/customer-api/create-order
+Content-Type: application/json
+
+{
+  "order_id":2,
+  "order_date":"2020-02-10",
+  "customer_id":2,
+  "product_id":2
+}
+
+###  //get all orders placed by all customers
+get http://localhost:8000/customer-api/orders-customers
+
+###  //get all orders placed by a customer using customer_id
+get http://localhost:8000/customer-api/orders-by-customer/1
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+//start of products requests
+###
+get http://localhost:8000/product-api/product
+
+
+###
+get http://localhost:8000/product-api/get-products
+
+
+
+

@@ -1,0 +1,23 @@
+API End points:
+POST http://localhost:4000/customer-api/customer
+POST http://localhost:4000/product-api/product
+POST http://localhost:4000/customer-api/customer-review/customer-id/<customer_id>/ product-id/<product_id>
+POST http://localhost:4000/customer-api/customer-order
+white_check_mark
+eyes
+raised_hands
+
+
+
+
+
+10:19
+GET http://localhost:4000/customer-api/customers
+GET http://localhost:4000/product-api/products
+GET http://localhost:4000/customer-api/customer-orders/<customer_id>
+GET http://localhost:4000/customer-api/customer-reviews/<customer_id>
+10:20
+Steps for implementations:
+1.Create backend with server, routes, middleware and controllers
+2. Create JSONs
+3. Implement routes & controllers
